@@ -1,2 +1,2 @@
 # Redmine
-Redmine with Nginx load balancer
+Redmine with Nginx load balancer and Maria databases
