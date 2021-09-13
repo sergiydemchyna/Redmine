@@ -13,17 +13,3 @@ resource "aws_subnet" "prod-subnet-public-1" {
     map_public_ip_on_launch = "true"
     availability_zone = "eu-west-3a"
 
-}
-resource "aws_subnet" "prod-subnet-privat-1" {
-    vpc_id = "${aws_vpc.prod-vpc.id}"
-    cidr_block = "10.0.1.0/24"
-    availability_zone = "eu-west-3a"
-
-}
-
-resource "aws_subnet" "prod-subnet-privat-2" {
-    vpc_id = "${aws_vpc.prod-vpc.id}"
-    cidr_block = "10.0.1.0/24"
-    availability_zone = "eu-west-3b"
-
-}
