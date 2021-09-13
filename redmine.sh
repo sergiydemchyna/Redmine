@@ -1,7 +1,6 @@
 #!/bin/bash
-echo 'Acquire::ForceIPv4 "true";' | sudo tee /etc/apt/apt.conf.d/99force-ipv4
-sudo apt update -y
-sudo apt upgrade -y
+sudo apt-get -o Acquire::ForceIPv4=true update -y
+sudo apt-get -o Acquire::ForceIPv4=true upgrade -y
 sudo apt install build-essential ruby-dev libxslt1-dev libmariadb-dev libxml2-dev zlib1g-dev imagemagick libmagickwand-dev curl gnupg2 bison libbison-dev libgdbm-dev libncurses-dev libncurses5-dev libreadline-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 -y
 sudo apt install apache2 libapache2-mod-passenger -y
 sudo systemctl enable --now apache2
