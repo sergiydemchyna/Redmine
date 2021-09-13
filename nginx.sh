@@ -1,7 +1,6 @@
 #!/bin/bash
-echo 'Acquire::ForceIPv4 "true";' | sudo tee /etc/apt/apt.conf.d/99force-ipv4
-sudo apt update -y
-sudo apt install nginx -y
+sudo apt-get -o Acquire::ForceIPv4=true update -y
+sudo apt-get -o Acquire::ForceIPv4=true upgrade -y
 
 sudo cat <<EOF > /etc/nginx/sites-available/default
 
